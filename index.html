@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2312202B'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='%23F3F6F7' text-anchor='middle'%3ERN%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Rayan Nguebou Temgoua · Data, BI & IA">
+<meta property="og:description" content="Élève ingénieur IA & Data à l'ESIEE-IT. Projets détaillés avec résultats. Recherche une alternance de 12 à 24 mois.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/voicebank-assistant.webp">
+<title>Rayan Nguebou Temgoua</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfolio de Rayan Nguebou Temgoua, élève ingénieur IA & Data à l'ESIEE-IT : projets data, BI et IA détaillés avec leurs résultats. Recherche un contrat d'apprentissage de 12 à 24 mois.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout : colonne éditoriale de 1120 px ; chaque projet est une « étude de cas » (récit à gauche, preuves visuelles à droite). */
+:root{
+  --bg:#F3F6F7; --surface:#FFFFFF; --sunk:#E8EEF0; --ink:#12202B; --muted:#55687A; --line:#D8E1E6;
+  --accent:#0C7566; --accent-soft:#DDF0EC; --sun:#C97A12; --sun-soft:#FBEBD3;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --r:14px; --shadow:0 1px 2px rgba(18,32,43,.06), 0 8px 28px rgba(18,32,43,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C151C; --surface:#132029; --sunk:#0F1A22; --ink:#E6EDF1; --muted:#9BADBA; --line:#22333F;
+  --accent:#3CC2AC; --accent-soft:#12332F; --sun:#F0A84A; --sun-soft:#3A2A13;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C151C; --surface:#132029; --sunk:#0F1A22; --ink:#E6EDF1; --muted:#9BADBA; --line:#22333F;
+  --accent:#3CC2AC; --accent-soft:#12332F; --sun:#F0A84A; --sun-soft:#3A2A13;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono)}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.lede{font-size:1.15rem;color:var(--muted);max-width:62ch}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 12px;border-radius:8px;z-index:100}
+.skip:focus{left:16px}
+
+/* ---------- En-tête ---------- */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;color:var(--ink);text-decoration:none;font-size:1.05rem}
+.mark{width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:.85rem;font-weight:800;letter-spacing:.02em}
+nav.menu{display:flex;gap:4px;flex-wrap:wrap}
+nav.menu a{color:var(--muted);text-decoration:none;font-size:.93rem;font-weight:500;padding:7px 11px;border-radius:999px}
+nav.menu a:hover,nav.menu a.on{color:var(--ink);background:var(--sunk)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:7px 11px;font:500 .9rem var(--body);cursor:pointer}
+@media (max-width:860px){
+  .burger{display:block}
+  nav.menu{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;padding:8px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px))}
+  nav.menu.open{display:flex}
+  nav.menu a{padding:11px 12px}
+}
+
+/* ---------- Héros ---------- */
+.who{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.portrait{width:112px;height:112px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--bg);box-shadow:0 0 0 2px var(--accent),0 10px 30px -12px rgba(0,0,0,.35);background:var(--surface)}
+.mark.photo{background:none;padding:0;overflow:hidden}.mark.photo img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+@media (max-width:560px){.portrait{width:88px;height:88px}}
+
+.hero{padding-block:64px 56px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero-grid>*{min-width:0}
+.hello{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.82rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:6px 12px 6px 8px;border-radius:999px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.4rem);font-weight:800;margin-top:22px;letter-spacing:-.025em}
+.hero h1 .soft{color:var(--muted);font-weight:500}
+.hero .thesis{font-family:var(--display);font-weight:500;font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3;margin-top:20px;max-width:30ch}
+.hero .thesis em{font-style:normal;color:var(--accent);background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
+.hero .lede{margin-top:16px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;font-weight:600;font-size:.97rem;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface);transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn svg{width:18px;height:18px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;color:var(--muted);font-size:.92rem}
+.facts span{display:inline-flex;align-items:center;gap:7px}
+.facts svg{width:16px;height:16px;color:var(--accent)}
+
+/* Requête-résultat : la signature du héros */
+.query{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.query-head{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--sunk)}
+.query-head i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
+.query-head span{margin-left:8px;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.sql{font-family:var(--mono);font-size:.82rem;line-height:1.55;padding:16px 18px 6px;color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere}
+.sql b{color:var(--accent);font-weight:500}
+.sql s{text-decoration:none;color:var(--sun)}
+.res{width:100%;border-collapse:collapse;font-size:.92rem}
+.res td{padding:11px 18px;border-top:1px solid var(--line);vertical-align:baseline}
+.res td:first-child{color:var(--muted)}
+.res td:last-child{text-align:right;font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink)}
+.res tr:hover td{background:var(--sunk)}
+.query-foot{padding:10px 18px 14px;font-family:var(--mono);font-size:.74rem;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero{padding-block:40px 40px}}
+
+/* ---------- Sections ---------- */
+section.block{padding-block:84px}
+section.block+section.block{border-top:1px solid var(--line)}
+.sec-head{display:grid;gap:12px;margin-bottom:40px;max-width:760px}
+.sec-head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:800}
+@media (max-width:640px){section.block{padding-block:60px}}
+
+/* À propos */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:48px}
+.about>*{min-width:0}
+.story{display:grid;gap:18px;font-size:1.06rem}
+.story p{max-width:64ch}
+.story strong{color:var(--ink)}
+.quote{border-left:3px solid var(--sun);padding:6px 0 6px 18px;font-family:var(--display);font-size:1.25rem;line-height:1.35;font-weight:500}
+.side{display:grid;gap:18px;align-content:start}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.panel h3{font-size:1.05rem;font-weight:700;margin-bottom:12px}
+.traits{display:grid;gap:12px}
+.trait{display:grid;grid-template-columns:130px 1fr;gap:12px;font-size:.95rem;align-items:baseline}
+.trait b{font-weight:600}
+.trait span{color:var(--muted)}
+.langs{display:grid;gap:8px;font-size:.95rem}
+.langs div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:7px}
+.langs div:last-child{border:0;padding:0}
+.langs span{color:var(--muted);text-align:right}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+@media (max-width:440px){.trait{grid-template-columns:1fr;gap:2px}}
+
+/* Parcours (frise) */
+.path{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:48px;position:relative}
+.path::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--line)}
+.stop{position:relative;padding:30px 18px 0 0}
+.stop::before{content:"";position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.stop.now::before{background:var(--accent)}
+.stop .when{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.stop h4{font-size:1.02rem;margin-top:4px;font-weight:700}
+.stop p{font-size:.92rem;color:var(--muted);margin-top:4px}
+@media (max-width:760px){
+  .path{grid-template-columns:1fr;gap:22px}
+  .path::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .stop{padding:0 0 0 34px}
+  .stop::before{top:3px}
+}
+
+/* ---------- Projets ---------- */
+.proj-index{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:48px}
+.proj-index a{text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:500;border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:999px}
+.proj-index a:hover{border-color:var(--accent);color:var(--accent)}
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:44px;padding-block:52px;border-top:1px solid var(--line);scroll-margin-top:80px}
+.case:first-of-type{border-top:0;padding-top:0}
+.case.flip .case-text{order:2}
+.case-text{display:grid;gap:18px;align-content:start}
+.case-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{font-family:var(--mono);font-size:.74rem;padding:4px 9px;border-radius:7px;background:var(--sunk);color:var(--muted);border:1px solid var(--line)}
+.tag.hl{background:var(--sun-soft);color:var(--sun);border-color:transparent;font-weight:500}
+.case h3{font-size:clamp(1.6rem,3vw,2.15rem);font-weight:800}
+.case .pitch{font-size:1.08rem;color:var(--muted)}
+.case h4{font-family:var(--mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);font-weight:500;margin-bottom:8px}
+.case ul{margin:0;padding-left:1.1em;display:grid;gap:7px}
+.case li{padding-left:2px}
+.case li::marker{color:var(--accent)}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.metric{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.metric b{display:block;font-family:var(--display);font-size:1.55rem;font-weight:800;line-height:1.1;color:var(--accent);font-variant-numeric:tabular-nums}
+.metric span{font-size:.84rem;color:var(--muted);line-height:1.35;display:block;margin-top:4px}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.93rem;text-decoration:none;padding:9px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links svg{width:16px;height:16px}
+.honest{font-size:.88rem;color:var(--muted);background:var(--sunk);border-radius:10px;padding:10px 14px;border:1px solid var(--line)}
+.honest b{color:var(--ink);font-weight:600}
+
+.gallery{display:grid;gap:12px;align-content:start;align-items:start}
+.gallery.two{grid-template-columns:1fr 1fr}
+.shot{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.shot button{all:unset;display:block;width:100%;cursor:zoom-in}
+.shot button:focus-visible{outline:3px solid var(--sun);outline-offset:-3px}
+.shot img{width:100%;height:auto;transition:transform .35s ease}
+.shot button:hover img{transform:scale(1.02)}
+.shot figcaption{font-size:.83rem;color:var(--muted);padding:9px 13px;border-top:1px solid var(--line)}
+.shot.span{grid-column:1/-1}
+.shot.tall img{max-height:520px;object-fit:cover;object-position:top}
+video{width:100%;display:block;background:#000;aspect-ratio:16/9}
+
+/* Schéma de flux (projets sans capture) */
+.flow{display:grid;gap:10px;align-content:start;align-self:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.flow-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:stretch}
+.node{border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--sunk);position:relative;min-width:0}
+.node small{display:block;font-family:var(--mono);font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.node b{display:block;font-size:.95rem;margin-top:4px;line-height:1.25}
+.node span{display:block;font-size:.8rem;color:var(--muted);margin-top:4px;line-height:1.35}
+.node:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);font-size:.85rem;color:var(--accent);background:var(--surface);width:14px;text-align:center;z-index:1}
+.flow>.node::after{display:none}
+.flow>.node b{font-size:.9rem}
+.bigstat{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;padding-top:14px;border-top:1px dashed var(--line);margin-top:6px}
+.bigstat b{font-family:var(--display);font-size:3.2rem;font-weight:800;line-height:1;color:var(--sun)}
+.bigstat p{color:var(--muted);font-size:.95rem}
+.bar{height:10px;border-radius:999px;background:var(--sunk);border:1px solid var(--line);overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;background:var(--sun)}
+.modules{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
+.modules span{font-size:.8rem;padding:4px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+@media (max-width:640px){
+  .flow-row{grid-template-columns:1fr 1fr}
+  .node:nth-child(2n)::after{display:none}
+}
+@media (max-width:900px){
+  .case,.case.flip{grid-template-columns:1fr;gap:28px}
+  .case.flip .case-text{order:0}
+}
+@media (max-width:480px){.gallery.two{grid-template-columns:1fr}}
+
+.more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.mini{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:10px;align-content:start}
+.mini h4{font-size:1.1rem;font-weight:700}
+.mini p{color:var(--muted);font-size:.93rem}
+.mini a{font-weight:600;font-size:.9rem;text-decoration:none}
+@media (max-width:900px){.more{grid-template-columns:1fr}}
+
+/* ---------- Expériences ---------- */
+.jobs{display:grid;gap:0}
+.job{display:grid;grid-template-columns:220px 1fr;gap:32px;padding-block:30px;border-top:1px solid var(--line)}
+.job:first-child{border-top:0;padding-top:0}
+.job>*{min-width:0}
+.job .when{font-family:var(--mono);font-size:.84rem;color:var(--muted);line-height:1.5}
+.job .where{font-size:.88rem;color:var(--muted);margin-top:6px}
+.job h3{font-size:1.35rem;font-weight:700}
+.job .org{color:var(--accent);font-weight:600;margin-top:4px}
+.job ul{margin:14px 0 0;padding-left:1.1em;display:grid;gap:8px}
+.job li::marker{color:var(--accent)}
+.job li b{font-weight:600}
+@media (max-width:760px){.job{grid-template-columns:1fr;gap:8px}}
+
+/* ---------- Compétences ---------- */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.skill h3{font-size:1.02rem;font-weight:700;margin-bottom:6px}
+.skill p.why{font-size:.86rem;color:var(--muted);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:.84rem;padding:4px 10px;border-radius:8px;background:var(--sunk);border:1px solid var(--line)}
+@media (max-width:900px){.skills{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.skills{grid-template-columns:1fr}}
+.certs{margin-top:28px;display:grid;gap:8px;font-size:.95rem}
+.certs div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.certs span{color:var(--muted);font-family:var(--mono);font-size:.82rem}
+
+/* ---------- Formation ---------- */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.school{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;gap:10px;align-content:start}
+.school .when{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.school h3{font-size:1.25rem;font-weight:700}
+.school .org{color:var(--accent);font-weight:600}
+.school p{color:var(--muted);font-size:.95rem}
+.school.now{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+@media (max-width:760px){.edu{grid-template-columns:1fr}}
+
+/* ---------- Projet professionnel ---------- */
+.goal{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.goal>*{min-width:0}
+.goal .story{font-size:1.06rem}
+.ask{background:var(--ink);color:var(--bg);border-radius:20px;padding:28px;display:grid;gap:16px}
+.ask h3{font-size:1.35rem;font-weight:800}
+.ask dl{margin:0;display:grid;gap:12px}
+.ask dt{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;opacity:.7}
+.ask dd{margin:2px 0 0;font-weight:500}
+.targets{display:grid;gap:12px;margin-top:6px}
+.target{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.target i{font-style:normal;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-family:var(--mono);font-weight:500;font-size:.9rem}
+.target b{display:block}
+.target span{font-size:.9rem;color:var(--muted)}
+@media (max-width:900px){.goal{grid-template-columns:1fr}}
+
+/* ---------- Contact ---------- */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,5vw,48px);display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;box-shadow:var(--shadow)}
+.contact>*{min-width:0}
+.contact h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800}
+.contact p{color:var(--muted);margin-top:12px;max-width:52ch}
+.channels{display:grid;gap:10px}
+.channel{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg);min-width:0}
+.channel>div{min-width:0}
+.channel small{display:block;font-family:var(--mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.channel a,.channel .val{font-weight:600;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
+.channel a:hover{color:var(--accent)}
+.copy{flex:none;background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;font:500 .82rem var(--body);cursor:pointer}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+
+footer{padding-block:36px 48px;color:var(--muted);font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- Visionneuse ---------- */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(6,12,16,.88);display:grid;place-items:center;padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb figure{margin:0;max-width:min(1400px,100%);max-height:100%;display:grid;gap:10px}
+.lb img{max-height:82vh;width:auto;margin:0 auto;border-radius:10px;background:#fff}
+.lb figcaption{color:#E6EDF1;text-align:center;font-size:.92rem}
+.lb .close{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));background:#E6EDF1;color:#12202B;border:0;border-radius:999px;padding:9px 14px;font:600 .9rem var(--body);cursor:pointer}
+
+.reveal{animation:rise .7s ease both}
+.reveal.d2{animation-delay:.08s}.reveal.d3{animation-delay:.16s}
+@keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+</style>
+
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 5v14l11-7z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v14H4zM4 10h16M9 3v4M15 3v4"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m2 9 10-5 10 5-10 5zM6 11v5c3 2.5 9 2.5 12 0v-5"/></symbol>
+</svg>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil" aria-label="Retour en haut"><span class="mark photo" aria-hidden="true"><img src="assets/img/portrait.webp" alt="" width="34" height="34"></span>Rayan Nguebou Temgoua</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Sections">
+      <a href="#apropos">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#experiences">Expériences</a>
+      <a href="#competences">Compétences</a>
+      <a href="#formation">Formation</a>
+      <a href="#projet-pro">Projet pro</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+
+<!-- ================= HÉROS ================= -->
+<section class="hero" id="accueil">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="who">
+        <img class="portrait" src="assets/img/portrait.webp" width="640" height="640" alt="Portrait de Rayan Nguebou Temgoua">
+        <span class="hello"><span class="dot" aria-hidden="true"></span>Disponible pour une alternance de 12 à 24 mois</span>
+      </div>
+      <h1>Rayan Nguebou Temgoua<br><span class="soft">Data, BI &amp; IA</span></h1>
+      <p class="thesis">Je mets la donnée et l'IA <em>au service des personnes</em> qui l'utilisent au quotidien.</p>
+      <p class="lede">Élève ingénieur IA &amp; Data (Bac+4) à l'ESIEE-IT. Je conçois des pipelines, des tableaux de bord et des assistants d'IA, et je mesure toujours ce qu'ils apportent.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projets">Voir mes projets</a>
+        <a class="btn" href="assets/doc/CV_Rayan_NGUEBOU_TEMGOUA.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg>Mon CV (PDF)</a>
+        <a class="btn" href="#contact">Me contacter</a>
+      </div>
+      <div class="facts">
+        <span><svg aria-hidden="true"><use href="#i-pin"/></svg>Pontoise (95), mobile partout en France</span>
+        <span><svg aria-hidden="true"><use href="#i-cal"/></svg>Disponible immédiatement</span>
+        <span><svg aria-hidden="true"><use href="#i-cap"/></svg>ESIEE-IT, cycle ingénieur</span>
+      </div>
+    </div>
+
+    <div class="query reveal d2" aria-label="Mes résultats clés">
+      <div class="query-head"><i></i><i></i><i></i><span>resultats.sql</span></div>
+      <div class="sql"><b>SELECT</b> projet, resultat
+<b>FROM</b> mon_parcours
+<b>WHERE</b> mesure = <s>'vérifiée'</s>;</div>
+      <table class="res">
+        <tbody>
+          <tr><td>Documents dans le moteur NLP EcoData</td><td>676 811</td></tr>
+          <tr><td>Collecte automatisée, 50+ sources</td><td>−40 %</td></tr>
+          <tr><td>Détection d'anomalies, 60 000+ lignes</td><td>99,49 %</td></tr>
+          <tr><td>Assistant IA : bonne source citée</td><td>17/17</td></tr>
+          <tr><td>Tests automatisés, VoiceBank</td><td>330</td></tr>
+          <tr><td>Pannes en moins, maintenance proactive</td><td>−15 %</td></tr>
+          <tr><td>Projet SmartNjangi, soutenance</td><td>Excellente</td></tr>
+        </tbody>
+      </table>
+      <div class="query-foot">7 lignes · chaque chiffre est détaillé plus bas</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="block" id="apropos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">À propos</span>
+      <h2>Qui je suis</h2>
+    </div>
+    <div class="about">
+      <div class="story">
+        <p>J'ai fait mes études d'ingénieur à <strong>Douala, au Cameroun</strong>, en classe préparatoire intégrée puis en cycle ingénieur BI &amp; Big Data, avant de rejoindre l'<strong>ESIEE-IT à Pontoise</strong> en 2026 pour ma spécialité IA &amp; Data. Changer de pays m'a appris à m'adapter vite et à rester exigeant avec moi-même.</p>
+        <p>Ce qui me motive, c'est l'utilité. Derrière chaque tableau de bord, il y a quelqu'un qui doit prendre une décision. Derrière chaque outil, il y a un collègue qui veut gagner du temps. Chez BOCOM, j'ai développé le logiciel qui permet à la cellule RH de gérer les demandes de congés. Voir un processus papier devenir simple et traçable pour ceux qui l'utilisent tous les jours, c'est ce qui me donne envie de continuer.</p>
+        <p class="quote">« Un tableau de bord ne vaut que par la qualité de ses données. Je contrôle toujours avant de publier. »</p>
+        <p>J'aime aussi que l'IA reste honnête : mon assistant documentaire cite ses sources et sait répondre « je n'ai pas trouvé » plutôt que d'inventer. Pour moi, c'est la condition pour qu'on lui fasse confiance.</p>
+        <p>En dehors des cours, je suis <strong>bénévole chez Cop1 – Solidarités Étudiantes</strong>. Je participe aux distributions alimentaires et à la logistique : accueil des étudiants, colis, stocks, planning des bénévoles. L'humain compte pour moi, autant que le code.</p>
+        <p>Mon point de vigilance : je veux parfois tout vérifier moi-même. En dirigeant une équipe d'environ cinq personnes chez Trends &amp; Poor, j'ai appris à fixer un niveau de contrôle suffisant et à faire confiance à l'équipe.</p>
+      </div>
+      <div class="side">
+        <div class="panel">
+          <h3>Mes qualités, avec leur preuve</h3>
+          <div class="traits">
+            <div class="trait"><b>Rigueur</b><span>Contrôles qualité systématiques, 330 tests automatisés sur VoiceBank</span></div>
+            <div class="trait"><b>Leadership</b><span>2 équipes projet dirigées (Trends &amp; Poor, Tech-Mission)</span></div>
+            <div class="trait"><b>Autonomie</b><span>Stage de 3 mois mené entièrement à distance, en anglais</span></div>
+            <div class="trait"><b>Pédagogie</b><span>Résultats expliqués aux métiers, soutenance devant jury</span></div>
+            <div class="trait"><b>Délais tenus</b><span>Plateforme web livrée 2 semaines avant l'échéance</span></div>
+            <div class="trait"><b>Curiosité</b><span>Veille IA et data, projets personnels publiés sur GitHub</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Langues</h3>
+          <div class="langs">
+            <div><b>Français</b><span>Langue maternelle</span></div>
+            <div><b>Anglais</b><span>Professionnel (stage de 3 mois en anglais)</span></div>
+            <div><b>Allemand</b><span>A1, Goethe-Zertifikat</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="path" aria-label="Mon parcours">
+      <div class="stop"><span class="when">2022 – 2024</span><h4>Prépa intégrée</h4><p>IUC Douala, partenaire de 3IL Limoges : maths, physique, statistiques.</p></div>
+      <div class="stop"><span class="when">2024 – 2026</span><h4>Cycle ingénieur BI &amp; Big Data</h4><p>2 ans à l'IUC Douala (3IL) : entrepôts de données, Big Data, BI.</p></div>
+      <div class="stop"><span class="when">2024 · 2025</span><h4>Stages DSI chez BOCOM</h4><p>Logiciel de congés RH, maintenance proactive, support utilisateurs.</p></div>
+      <div class="stop"><span class="when">06 – 08/2026</span><h4>Stage Trends &amp; Poor</h4><p>Data &amp; IA à distance, en anglais. SmartNjangi, mention Excellente.</p></div>
+      <div class="stop now"><span class="when">Depuis 09/2026</span><h4>ESIEE-IT, Pontoise</h4><p>Cycle ingénieur IA &amp; Data, en alternance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJETS ================= -->
+<section class="block" id="projets">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Projets</span>
+      <h2>Ce que j'ai construit, et ce que ça a donné</h2>
+      <p class="lede">Chaque projet est présenté avec son contexte, ce que j'ai réalisé, les résultats mesurés et des captures. Le code est sur GitHub.</p>
+    </div>
+    <nav class="proj-index" aria-label="Accès direct aux projets">
+      <a href="#voicebank">VoiceBank Analytics</a>
+      <a href="#ecodata">Moteur NLP EcoData</a>
+      <a href="#agent-rag">Assistant documentaire IA</a>
+      <a href="#bi-education">BI Éducation</a>
+      <a href="#smartnjangi">SmartNjangi</a>
+      <a href="#compost">Modèle thermique</a>
+      <a href="#turtlebot">Robot autonome</a>
+    </nav>
+
+    <!-- VoiceBank -->
+    <article class="case" id="voicebank">
+      <div class="case-text">
+        <div class="case-meta"><span class="tag hl">IA appliquée · Banque</span><span class="tag">Projet personnel · 2026</span></div>
+        <h3>VoiceBank Analytics</h3>
+        <p class="pitch">Un assistant bancaire vocal : on pose une question en français, au micro ou au clavier, et il répond par un graphique et une phrase lue à voix haute.</p>
+        <div>
+          <h4>Ce que j'ai réalisé</h4>
+          <ul>
+            <li>Traduction des questions en SQL (Text-to-SQL), exécution en lecture seule sur PostgreSQL, questions de suite comme « et à Douala ? ».</li>
+            <li>Détection de fraude (Isolation Forest + XGBoost) avec traitement des alertes, et score de crédit expliqué avec SHAP.</li>
+            <li>Protection des données : noms, e-mails et téléphones masqués pour le rôle analyste, jamais envoyés au modèle d'IA. Droits par rôle, double authentification, journal d'audit en ajout seul.</li>
+            <li>Apprentissage à partir des corrections validées par un administrateur (RAG), et fiabilité mesurée sur 50 questions de référence.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Résultats</h4>
+          <div class="metrics">
+            <div class="metric"><b>330</b><span>tests d'API automatisés</span></div>
+            <div class="metric"><b>24</b><span>parcours testés dans un vrai navigateur</span></div>
+            <div class="metric"><b>50</b><span>questions de référence pour mesurer la fiabilité</span></div>
+          </div>
+        </div>
+        <div class="stack"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Whisper</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Power BI</span><span class="tag">GitHub Actions</span></div>
+        <div class="links">
+          <a href="https://voicebank-ui.onrender.com" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Démo en ligne</a>
+          <a href="https://github.com/rayanrnguebou/VoiceBank-Analytics" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-gh"/></svg>Code source</a>
+        </div>
+      </div>
+      <div class="gallery two">
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/voicebank-assistant.webp" alt="Assistant vocal de VoiceBank : question « volume de transactions par ville », réponse rédigée, requête SQL et graphique en barres" loading="lazy" width="1440" height="900"></button><figcaption>L'assistant : la question, la réponse lue à voix haute, la requête SQL générée et le graphique.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/voicebank-alertes.webp" alt="Écran des alertes de fraude de VoiceBank" loading="lazy" width="1440" height="900"></button><figcaption>Alertes de fraude à traiter.</figcaption></figure>
+        <figure class="shot tall"><button type="button" data-zoom><img src="assets/img/voicebank-mobile.webp" alt="VoiceBank sur téléphone" loading="lazy" width="739" height="1600"></button><figcaption>Version téléphone.</figcaption></figure>
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/voicebank-powerbi.webp" alt="Tableau de bord Power BI de VoiceBank : transactions, fraudes, scores de crédit et carte des agences" loading="lazy" width="1298" height="791"></button><figcaption>Le tableau de bord Power BI : transactions, taux de fraude, crédits par statut.</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- EcoData NLP -->
+    <article class="case flip" id="ecodata">
+      <div class="case-text">
+        <div class="case-meta"><span class="tag hl">NLP · Intelligence économique</span><span class="tag">Stage Trends &amp; Poor · 2026</span><span class="tag">En ligne</span></div>
+        <h3>Moteur NLP d'EcoData Afrique</h3>
+        <p class="pitch">EcoData Afrique est la plateforme de données économiques de Trends &amp; Poor pour les 14 pays de l'UEMOA et de la CEMAC. J'ai développé le moteur qui lit automatiquement des milliers d'articles de presse et de documents économiques, en français et en anglais, pour en tirer des informations exploitables.</p>
+        <div>
+          <h4>Ce que j'ai réalisé</h4>
+          <ul>
+            <li>Collecte automatique quotidienne : API des archives du New York Times, Camer.be et Abidjan.net.</li>
+            <li>Prétraitement : détection de la langue, nettoyage, normalisation et suppression des doublons (empreinte MD5 et similarité de Jaccard).</li>
+            <li>6 services d'API : recherche hybride (sémantique et par mots-clés), classification en 15 secteurs avec sentiment et urgence, résumé FR/EN, extraction d'entités (BCEAO, BEAC, montants, dates), détection d'événements et synthèse hebdomadaire.</li>
+            <li>Tableau de bord des indices de risque (politique, économique, géostratégique, gouvernance) en base 100, avec une méthode de calcul expliquée à l'utilisateur.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Résultats</h4>
+          <div class="metrics">
+            <div class="metric"><b>676 811</b><span>documents en base, dont 34 173 sur le périmètre africain</span></div>
+            <div class="metric"><b>+35 %</b><span>de vitesse de traitement des flux textuels</span></div>
+            <div class="metric"><b>6/6</b><span>tests de cohérence réussis sur la recherche</span></div>
+          </div>
+        </div>
+        <p class="honest"><b>Ce que mesure l'indice :</b> c'est un indicateur relatif, calculé sur la tonalité de la presse. Il sert à repérer une tendance, pas à noter un pays. Je l'indique sur le tableau de bord lui-même.</p>
+        <div class="stack"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL + pgvector</span><span class="tag">CamemBERT</span><span class="tag">Embeddings multilingues</span><span class="tag">Celery · Redis</span><span class="tag">Docker</span></div>
+        <div class="links">
+          <a href="https://ecodata.africa/landing" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Plateforme EcoData Afrique</a>
+        </div>
+      </div>
+      <div class="gallery two">
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/ecodata-dashboard.webp" alt="Tableau de bord EcoData Afrique des indices de risque prospectifs : 4 000 documents analysés, 60 alertes critiques, 4 indices" loading="lazy" width="1600" height="916"></button><figcaption>Le tableau de bord des indices de risque, en ligne sur EcoData Afrique.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/ecodata-methode.webp" alt="Fenêtre « Comment lire ces indices » qui explique le calcul en trois étapes" loading="lazy" width="992" height="751"></button><figcaption>La méthode de calcul, expliquée directement dans l'outil.</figcaption></figure>
+        <div class="flow" aria-label="Fonctionnement du moteur NLP">
+          <h4 class="eyebrow">Chaîne de traitement</h4>
+          <div class="node"><small>1 · Collecte</small><b>Presse et rapports</b></div>
+          <div class="node"><small>2 · Prétraitement</small><b>Langue, nettoyage, doublons</b></div>
+          <div class="node"><small>3 · Intelligence</small><b>6 services d'API</b></div>
+          <div class="node"><small>4 · Restitution</small><b>EcoData Afrique</b></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Agent RAG -->
+    <article class="case" id="agent-rag">
+      <div class="case-text">
+        <div class="case-meta"><span class="tag hl">IA générative · RAG</span><span class="tag">Projet personnel · 2026</span></div>
+        <h3>Assistant de documentation interne</h3>
+        <p class="pitch">Un agent IA qui répond aux questions des collaborateurs (congés, télétravail, notes de frais, accueil) uniquement à partir des documents de l'entreprise, en citant ses sources.</p>
+        <div>
+          <h4>Ce que j'ai réalisé</h4>
+          <ul>
+            <li>Lecture des PDF, Word et Markdown, découpage en passages, index vectoriel avec un modèle d'embeddings multilingue.</li>
+            <li>Recherche des 5 passages les plus proches ; en dessous d'un seuil, l'agent répond qu'il n'a pas trouvé au lieu d'inventer.</li>
+            <li>Citations vérifiables : le modèle cite des numéros d'extraits, transformés par le code en nom de document et page.</li>
+            <li>Modèle interchangeable (Gemini, Groq, API Claude ou Ollama en local pour les documents sensibles), installation en un double-clic sous Windows.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Résultats</h4>
+          <div class="metrics">
+            <div class="metric"><b>17/17</b><span>bonne source citée</span></div>
+            <div class="metric"><b>17/17</b><span>bonne information donnée</span></div>
+            <div class="metric"><b>3/3</b><span>refus sur les questions hors sujet</span></div>
+          </div>
+        </div>
+        <p class="honest"><b>Le test en clair :</b> 20 questions sur 5 documents d'une société fictive. Il vérifie le comportement de l'agent ; ce n'est pas une mesure sur une vraie base documentaire.</p>
+        <div class="stack"><span class="tag">Python</span><span class="tag">RAG</span><span class="tag">fastembed</span><span class="tag">Streamlit</span><span class="tag">Gemini · Groq · Claude · Ollama</span></div>
+        <div class="links">
+          <a href="https://github.com/rayanrnguebou/agent-doc-interne" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-gh"/></svg>Code source</a>
+        </div>
+      </div>
+      <div class="gallery">
+        <figure class="shot">
+          <video controls preload="none" poster="assets/img/agent-rag-poster.webp" aria-label="Démonstration vidéo de l'assistant de documentation interne">
+            <source src="assets/video/agent-rag-demo.mp4" type="video/mp4">
+          </video>
+          <figcaption><svg aria-hidden="true" width="12" height="12" style="display:inline;vertical-align:-1px"><use href="#i-play"/></svg> Démonstration (2 min 30) : questions, réponses et sources citées.</figcaption>
+        </figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/agent-reponse.webp" alt="Réponse de l'assistant avec des numéros de citation et la liste des sources consultées" loading="lazy" width="1600" height="833"></button><figcaption>Une réponse avec ses citations [1], [2]… et les passages consultés.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/agent-refus.webp" alt="L'assistant répond qu'il n'a pas trouvé l'information dans la documentation interne" loading="lazy" width="1600" height="833"></button><figcaption>Information absente : l'assistant le dit au lieu d'inventer.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/agent-panneau.webp" alt="Panneau des discussions et liste des documents indexés" loading="lazy" width="1600" height="833"></button><figcaption>Documents indexés, ajout de fichiers et historique des discussions.</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- BI Éducation -->
+    <article class="case flip" id="bi-education">
+      <div class="case-text">
+        <div class="case-meta"><span class="tag hl">Business Intelligence</span><span class="tag">Projet académique · 2025-2026</span></div>
+        <h3>Réussite et décrochage étudiant : le système décisionnel complet</h3>
+        <p class="pitch">Des établissements veulent comprendre la réussite et le décrochage de leurs étudiants. J'ai construit toute la chaîne, de la donnée brute au tableau de bord.</p>
+        <div>
+          <h4>Ce que j'ai réalisé</h4>
+          <ul>
+            <li>Entrepôt de données en étoile (méthode Kimball, MySQL) : 2 tables de faits et 10 dimensions.</li>
+            <li>8 jobs ETL Talend orchestrés par un job maître, avec des contrôles qualité avant chaque actualisation.</li>
+            <li>Tableau de bord Power BI de 14 pages en 7 modules : KPI, 4 profils de risque calculés en DAX, simulation de risque et page d'alerte précoce.</li>
+            <li>Distributions des données calibrées sur une thèse de doctorat consacrée au décrochage universitaire.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Résultats</h4>
+          <div class="metrics">
+            <div class="metric"><b>7 262</b><span>notes analysées, 600 étudiants</span></div>
+            <div class="metric"><b>14</b><span>pages de tableau de bord</span></div>
+            <div class="metric"><b>73 %</b><span>des décrochages liés à l'isolement social</span></div>
+          </div>
+        </div>
+        <div class="stack"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Talend</span><span class="tag">MySQL</span><span class="tag">Kimball</span><span class="tag">Python</span></div>
+        <div class="links">
+          <a href="https://github.com/rayanrnguebou/bi-education-performance" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-gh"/></svg>Code, rapport et fichier Power BI</a>
+        </div>
+      </div>
+      <div class="gallery two">
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/bi-vue.webp" alt="Page Vue d'ensemble du tableau de bord Power BI : taux de réussite et indicateurs clés" loading="lazy" width="1533" height="773"></button><figcaption>Vue d'ensemble : réussite, moyennes et indicateurs clés.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/bi-abandons.webp" alt="Page Décrochage académique : abandons par filière, par motif et carte par ville d'origine" loading="lazy" width="1340" height="745"></button><figcaption>Décrochage : abandons par filière, par motif et par ville d'origine.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/bi-profil.webp" alt="Page Profil individuel d'un étudiant" loading="lazy" width="1337" height="745"></button><figcaption>Profil individuel d'un étudiant.</figcaption></figure>
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/bi-alerte.webp" alt="Page Alerte précoce avec détection automatique des étudiants à risque" loading="lazy" width="1336" height="740"></button><figcaption>Alerte précoce : détection automatique des étudiants à risque.</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- SmartNjangi -->
+    <article class="case" id="smartnjangi">
+      <div class="case-text">
+        <div class="case-meta"><span class="tag hl">Big Data · Scoring de crédit</span><span class="tag">Stage Trends &amp; Poor · 2026</span></div>
+        <h3>SmartNjangi : un score de crédit pour les tontines</h3>
+        <p class="pitch">Les tontines, groupes d'épargne rotative très répandus en Afrique, ne laissent aucune trace dans le système bancaire. SmartNjangi transforme l'historique de paiements des tontines en score de crédit, pour ouvrir l'accès au crédit aux personnes non bancarisées du Cameroun et de la zone CEMAC.</p>
+        <div>
+          <h4>Ce que j'ai réalisé, seul, en 3 mois</h4>
+          <p style="color:var(--muted);font-size:.95rem;margin-bottom:8px">Sujet personnel choisi pour ma soutenance et validé par le responsable de l'école, en parallèle de mon travail en équipe chez Trends &amp; Poor.</p>
+          <ul>
+            <li>Pipeline Apache Spark qui calcule 18 indicateurs de comportement de paiement par utilisateur et classe chacun en 3 niveaux de fiabilité.</li>
+            <li>Modèle décisionnel et algorithme de scoring du risque, recommandations de crédit et export PDF.</li>
+            <li>Plateforme React / Node.js / MongoDB avec deux parcours (employés de banque et clients de tontines) et un module 3D de cartographie des tontines à risque.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Résultats</h4>
+          <div class="metrics">
+            <div class="metric"><b>18</b><span>indicateurs de paiement par utilisateur</span></div>
+            <div class="metric"><b>3</b><span>niveaux de fiabilité</span></div>
+            <div class="metric"><b>Excellente</b><span>mention obtenue à la soutenance</span></div>
+          </div>
+        </div>
+        <div class="stack"><span class="tag">Apache Spark</span><span class="tag">Docker</span><span class="tag">MongoDB</span><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Python</span></div>
+        <div class="links">
+          <a href="https://github.com/rayanrnguebou/SmartNjangi-showcase" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-gh"/></svg>Vitrine du projet</a>
+        </div>
+        <p class="honest"><b>Code privé :</b> la vitrine présente l'architecture et les fonctionnalités. Accès au code sur demande.</p>
+        <p class="honest"><b>Mention Excellente</b> à la soutenance de ce stage d'ingénieur de 4e année, avec rapport complet, diagrammes UML et démonstration en direct.</p>
+      </div>
+      <div class="gallery two">
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/sn-score.webp" alt="Écran Mon score de fiabilité : score de 68 et évolution" loading="lazy" width="1222" height="902"></button><figcaption>Score de fiabilité d'un client et son évolution.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/sn-carte.webp" alt="Carte 3D du Cameroun par région" loading="lazy" width="1477" height="898"></button><figcaption>Carte 3D du Cameroun, vue exécutive.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/sn-reco.webp" alt="Recommandations de crédit pour les clients éligibles" loading="lazy" width="1441" height="892"></button><figcaption>Recommandations de crédit.</figcaption></figure>
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/sn-aml.webp" alt="Alertes de conformité AML / LBC-FT" loading="lazy" width="1507" height="886"></button><figcaption>Alertes de conformité (lutte anti-blanchiment).</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- Compost -->
+    <article class="case flip" id="compost">
+      <div class="case-text">
+        <div class="case-meta"><span class="tag hl">Modélisation · Simulation</span><span class="tag">Projet personnel · 2026</span></div>
+        <h3>Pourquoi un compost monte-t-il seul à plus de 60 °C ?</h3>
+        <p class="pitch">J'ai modélisé et simulé la température d'un réacteur de compostage, puis j'en ai fait un outil en ligne pour tester des scénarios et optimiser l'aération.</p>
+        <div>
+          <h4>Ce que j'ai réalisé</h4>
+          <ul>
+            <li>Modèle à deux équations différentielles : dégradation de la matière organique et bilan d'énergie (chaleur biologique, pertes par les parois, air chaud et vapeur d'eau).</li>
+            <li>Solveur Runge-Kutta d'ordre 4 écrit à la main, comparé à Euler et à SciPy, avec vérification de l'ordre de convergence.</li>
+            <li>Calage par moindres carrés non linéaires, puis validation sur un second essai indépendant, sans recalage.</li>
+            <li>Application Streamlit : simulation, comparaison de scénarios, calage sur ses propres mesures, optimisation. 9 tests pytest.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Résultats</h4>
+          <div class="metrics">
+            <div class="metric"><b>0,70 °C</b><span>d'erreur en validation, comme le bruit du capteur</span></div>
+            <div class="metric"><b>&lt; 2 %</b><span>d'écart sur les paramètres retrouvés</span></div>
+            <div class="metric"><b>72,9 %</b><span>de matière dégradée avec l'aération régulée</span></div>
+          </div>
+        </div>
+        <p class="honest"><b>Le test en clair :</b> faute de mesures publiques, les deux essais sont synthétiques. Ils vérifient que la méthode retrouve les bons paramètres ; le modèle est prêt à être recalé sur de vraies mesures.</p>
+        <div class="stack"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Plotly</span><span class="tag">Streamlit</span><span class="tag">pytest</span></div>
+        <div class="links">
+          <a href="https://modele-thermique-compost.streamlit.app" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Application en ligne</a>
+          <a href="https://github.com/rayanrnguebou/modele-thermique-compost" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-gh"/></svg>Code et rapport</a>
+        </div>
+      </div>
+      <div class="gallery two">
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/compost-app.webp" alt="Application Streamlit du simulateur thermique : réglages du réacteur et courbes de température" loading="lazy" width="1400" height="1100"></button><figcaption>Le simulateur en ligne : pic à 65,4 °C, 55 °C atteints en 41 h.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/compost-calage.webp" alt="Calage du modèle sur l'essai 1 et validation sur l'essai 2" loading="lazy" width="1080" height="1188"></button><figcaption>Calage puis validation sur un essai indépendant.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/compost-cycle.webp" alt="Cycle thermique de référence du compost" loading="lazy" width="1080" height="1080"></button><figcaption>Cycle de référence sur 21 jours.</figcaption></figure>
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/compost-optim.webp" alt="Comparaison entre aération constante et aération régulée sur la température" loading="lazy" width="1440" height="504"></button><figcaption>Aération régulée : plus de matière dégradée en restant sous 60 °C.</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- TurtleBot -->
+    <article class="case" id="turtlebot">
+      <div class="case-text">
+        <div class="case-meta"><span class="tag hl">Robotique · Algorithmes</span><span class="tag">Projet transverse ESIEE-IT · 2026-2027</span></div>
+        <h3>Un robot qui trouve son chemin, piloté depuis un téléphone</h3>
+        <p class="pitch">Nous avons construit un TurtleBot3 qui cartographie une salle, calcule son chemin, le suit, évite les obstacles imprévus et se pilote depuis une page web, sans application à installer.</p>
+        <div>
+          <h4>Ce que nous avons réalisé</h4>
+          <ul>
+            <li>Nous avons codé A*, Dijkstra et RRT en Python, puis nous les avons comparés sur 4 cartes (longueur, temps de calcul, cases explorées, virages).</li>
+            <li>Suivi de chemin Pure Pursuit, LiDAR 360°, cartographie par SLAM maison ou slam_toolbox, sous ROS 2 Humble.</li>
+            <li>Station de contrôle en forme de manette : carte graduée, choix d'un point au doigt, voix, bilan de mission.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Résultats</h4>
+          <div class="metrics">
+            <div class="metric"><b>0</b><span>collision sur les missions testées</span></div>
+            <div class="metric"><b>48/48</b><span>relocalisations correctes, à moins de 10 cm</span></div>
+            <div class="metric"><b>66</b><span>tests automatiques, tous verts</span></div>
+          </div>
+        </div>
+        <p class="honest"><b>Ce que la comparaison a montré :</b> A* trouve le même chemin optimal que Dijkstra en explorant 2 à 14 fois moins de cases sur les cartes ouvertes. RRT échoue souvent dans les passages étroits (20 % de réussite dans le labyrinthe). Nous avons donc retenu A*.</p>
+        <div class="stack"><span class="tag">Python</span><span class="tag">ROS 2</span><span class="tag">A*</span><span class="tag">SLAM</span><span class="tag">Raspberry Pi</span><span class="tag">GitHub Actions</span></div>
+        <div class="links">
+          <a href="https://github.com/rayanrnguebou/turtlebot3-planificateur-trajectoire" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-gh"/></svg>Code source</a>
+        </div>
+      </div>
+      <div class="gallery two">
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/robot-mission.webp" alt="Station de contrôle du robot en forme de manette : mission en route avec chemin A*" loading="lazy" width="1600" height="739"></button><figcaption>La station de contrôle pendant une mission A*.</figcaption></figure>
+        <figure class="shot"><button type="button" data-zoom><img src="assets/img/robot-plan.webp" alt="Plan de la salle construit par slam_toolbox avec repère en mètres" loading="lazy" width="990" height="926"></button><figcaption>Plan de la salle exporté depuis le téléphone.</figcaption></figure>
+        <figure class="shot tall"><button type="button" data-zoom><img src="assets/img/robot-algos.webp" alt="Comparaison des algorithmes A*, Dijkstra et RRT dans la station" loading="lazy" width="940" height="1600"></button><figcaption>Comparaison des algorithmes en direct.</figcaption></figure>
+        <figure class="shot span"><button type="button" data-zoom><img src="assets/img/robot-photo.webp" alt="Le TurtleBot3 Burger : Raspberry Pi, carte OpenCR et roues" loading="lazy" width="1600" height="1200"></button><figcaption>Le vrai robot : Raspberry Pi 4, carte OpenCR, LiDAR.</figcaption></figure>
+      </div>
+    </article>
+
+    <h3 style="font-size:1.4rem;margin-top:40px">Autres projets</h3>
+    <div class="more">
+      <div class="mini">
+        <figure class="shot" style="box-shadow:none"><button type="button" data-zoom><img src="assets/img/trafic-app.webp" alt="Application de surveillance du trafic : flux vidéo, alertes de freinage brusque en temps réel" loading="lazy" width="1600" height="776"></button></figure>
+        <span class="tag" style="justify-self:start">Vision par ordinateur</span>
+        <h4>Surveillance intelligente du trafic à Douala</h4>
+        <p>Projet tutoré de 4e année, en binôme. Détection et suivi des véhicules (YOLOv8 + DeepSORT), comptage, et alertes en temps réel comme les freinages brusques, dans une application Streamlit reliée à MongoDB.</p>
+        <a href="https://github.com/rayanrnguebou/Syst-me-de-Surveillance-Intelligente-du-Trafic-par-Vision-Artificielle-et-Analyse-Comportementale" target="_blank" rel="noopener">Voir le code →</a>
+      </div>
+      <div class="mini">
+        <span class="tag" style="justify-self:start">Base de données graphe</span>
+        <h4>Recommandation e-commerce avec Neo4j</h4>
+        <p>Système de recommandation modélisé en graphe, exposé par une API FastAPI, visualisé avec React et comparé à PostgreSQL. Déployé avec Docker.</p>
+        <a href="https://github.com/rayanrnguebou/nosql-base_de_donn-es_orient-e_graphe" target="_blank" rel="noopener">Voir le code →</a>
+      </div>
+      <div class="mini">
+        <span class="tag" style="justify-self:start">Site web · Trends &amp; Poor</span>
+        <h4>Site institutionnel de Trends &amp; Poor</h4>
+        <p>Réalisé pendant mon stage : publications et rapports, espace abonnés avec newsletter, tableaux de bord EcoData en Plotly Dash. Django, PostgreSQL et Docker. Terminé, pas encore mis en ligne.</p>
+      </div>
+      <div class="mini">
+        <span class="tag" style="justify-self:start">Application RH</span>
+        <h4>Gestion des congés pour la cellule RH</h4>
+        <p>Chez BOCOM : demande en ligne, circuit de décision et réponse au collaborateur, avec connexion par l'Active Directory. Laravel et SQL Server.</p>
+        <a href="#experiences">Voir l'expérience →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPÉRIENCES ================= -->
+<section class="block" id="experiences">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Expériences</span>
+      <h2>En entreprise</h2>
+    </div>
+    <div class="jobs">
+      <div class="job">
+        <div><div class="when">06/2026 – 08/2026</div><div class="where">Télétravail, en anglais</div></div>
+        <div>
+          <h3>Stagiaire Data Analyst &amp; Développeur</h3>
+          <div class="org">Trends &amp; Poor</div>
+          <ul>
+            <li>Automatisé un pipeline Python de collecte de données sur <b>50+ sources</b> (API, web scraping) : temps d'acquisition <b>−40 %</b>.</li>
+            <li>Entraîné sous PySpark un Random Forest de détection d'anomalies sur <b>60 000+ lignes</b> : <b>99,49 %</b> de précision.</li>
+            <li>Déployé un moteur NLP de classification de flux textuels, intégré à la plateforme <b>EcoData Afrique</b>, en ligne : <a href="https://ecodata.africa/landing" target="_blank" rel="noopener">ecodata.africa</a>. Vitesse de traitement <b>+35 %</b>.</li>
+            <li>Réalisé le <b>site web de l'entreprise</b> (terminé, pas encore mis en ligne).</li>
+            <li>Dirigé l'équipe projet placée sous ma responsabilité, environ 5 personnes, entièrement à distance.</li>
+            <li>Choisi SmartNjangi comme sujet personnel de soutenance, validé par le responsable de l'école : projet mené seul et soutenu avec la <b>mention Excellente</b>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div><div class="when">06/2024 – 07/2024<br>06/2025 – 08/2025</div><div class="where">Douala</div></div>
+        <div>
+          <h3>Stagiaire DSI</h3>
+          <div class="org">B&amp;B Investment (Groupe BOCOM)</div>
+          <ul>
+            <li>Développé le <b>logiciel de gestion des congés</b> de la cellule RH (Laravel, SQL Server, Active Directory) : tout le processus numérisé et traçable.</li>
+            <li>Développé une application web de <b>maintenance proactive</b> du matériel informatique (React, PHP) : pannes <b>−15 %</b>.</li>
+            <li>Optimisé des requêtes SQL inter-services : génération des rapports <b>−20 %</b>.</li>
+            <li>Traité les demandes des utilisateurs et fait évoluer GLPI pour un suivi visible par tous ; documenté et formé l'équipe qui a repris une activité.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div><div class="when">01/2025 – 05/2025</div><div class="where">À distance</div></div>
+        <div>
+          <h3>Développeur web, responsable de l'équipe projet</h3>
+          <div class="org">Tech-Mission (mission freelance)</div>
+          <ul>
+            <li>Développé les modules d'une plateforme web en méthode Agile (sprints courts, priorisation, points réguliers avec le client).</li>
+            <li>Livré la plateforme <b>2 semaines avant l'échéance</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPÉTENCES ================= -->
+<section class="block" id="competences">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Compétences</span>
+      <h2>Ma boîte à outils</h2>
+    </div>
+    <div class="skills">
+      <div class="skill"><h3>Analyse &amp; BI</h3><p class="why">Tableau de bord BI Éducation, reportings</p><div class="chips"><span>Power BI (DAX, Power Query, Service, RLS)</span><span>Tableau</span><span>Qlik Sense</span><span>SSAS</span><span>Excel avancé (TCD, VBA)</span></div></div>
+      <div class="skill"><h3>Data Engineering &amp; SQL</h3><p class="why">Entrepôt en étoile, ETL contrôlés</p><div class="chips"><span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>Oracle PL/SQL</span><span>Modélisation Kimball</span><span>Talend</span><span>Qualité des données</span></div></div>
+      <div class="skill"><h3>Big Data &amp; Cloud</h3><p class="why">SmartNjangi, détection d'anomalies</p><div class="chips"><span>PySpark</span><span>Hadoop</span><span>Kafka</span><span>MongoDB</span><span>Neo4j</span><span>Azure Data Factory</span><span>BigQuery</span><span>Snowflake</span></div></div>
+      <div class="skill"><h3>Data science &amp; IA</h3><p class="why">VoiceBank, assistant documentaire</p><div class="chips"><span>Python (Pandas, Scikit-learn)</span><span>XGBoost</span><span>SHAP</span><span>PyTorch</span><span>NLP</span><span>LLM</span><span>RAG</span><span>Text-to-SQL</span><span>Agents IA</span></div></div>
+      <div class="skill"><h3>Modélisation &amp; statistiques</h3><p class="why">Modèle thermique, analyses</p><div class="chips"><span>Équations différentielles</span><span>Runge-Kutta</span><span>SciPy</span><span>Moindres carrés</span><span>ACP, AFC</span><span>R</span><span>Tests A/B</span></div></div>
+      <div class="skill"><h3>Développement &amp; qualité</h3><p class="why">330 tests, intégration continue</p><div class="chips"><span>Python</span><span>Java</span><span>FastAPI</span><span>React</span><span>PHP / Laravel</span><span>API REST</span><span>Git</span><span>GitHub Actions</span><span>Docker</span><span>pytest</span></div></div>
+    </div>
+    <div class="certs">
+      <h3 style="font-size:1.1rem;margin-bottom:6px">Attestations de formation (LinkedIn Learning)</h3>
+      <div><b>Préparer la certification Power BI Data Analyst Associate (PL-300)</b><span>05/2026</span></div>
+      <div><b>Se préparer au métier d'analyste de données (Microsoft et LinkedIn)</b><span>03/2025</span></div>
+      <div><b>Découvrir la data science : comprendre les bases</b><span>03/2025</span></div>
+      <div><b>Prompt engineering pour la génération de contenu avec l'IA</b><span>03/2025</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORMATION ================= -->
+<section class="block" id="formation">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Formation</span>
+      <h2>Mes études</h2>
+    </div>
+    <div class="edu">
+      <div class="school now">
+        <span class="when">Depuis 09/2026 · en alternance</span>
+        <h3>Diplôme d'ingénieur, spécialité IA &amp; Data</h3>
+        <span class="org">ESIEE-IT, Pontoise</span>
+        <p>Cycle ingénieur en 4e année, parcours IA &amp; Données de santé : IA, ingénierie des données, données de santé et RGPD. Projet transverse de robotique autonome.</p>
+      </div>
+      <div class="school">
+        <span class="when">2022 – 2026</span>
+        <h3>Classe prépa intégrée, puis 2 ans de cycle ingénieur 3IL en Business Intelligence &amp; Big Data</h3>
+        <span class="org">IUC Douala, partenaire de 3IL Limoges</span>
+        <p>Mathématiques, physique et statistiques ; bases de données et Big Data ; réseaux, cybersécurité et gouvernance des SI. Projet tutoré de vision par ordinateur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJET PRO ================= -->
+<section class="block" id="projet-pro">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Projet professionnel</span>
+      <h2>Où je veux aller</h2>
+    </div>
+    <div class="goal">
+      <div class="story">
+        <p>Je veux devenir un ingénieur data qui fait le lien entre la technique et les métiers : comprendre le besoin, fiabiliser la donnée, puis livrer un indicateur, un tableau de bord ou un outil d'IA que les équipes utilisent vraiment.</p>
+        <p>L'alternance est pour moi la bonne façon d'y arriver : appliquer tout de suite ce que j'apprends à l'ESIEE-IT, sur des sujets réels, et construire un projet dans la durée avec une équipe.</p>
+        <div class="targets">
+          <div class="target"><i>01</i><div><b>Data Analyst / BI</b><span>Reporting, Power BI, qualité des données, pilotage par les indicateurs.</span></div></div>
+          <div class="target"><i>02</i><div><b>Data &amp; risques</b><span>Banque, assurance, contrôle : scoring, détection d'anomalies, explication des modèles.</span></div></div>
+          <div class="target"><i>03</i><div><b>Data &amp; IA appliquée</b><span>Automatisation, assistants IA fiables et respectueux des données personnelles.</span></div></div>
+        </div>
+      </div>
+      <div class="ask">
+        <h3>Ce que je recherche</h3>
+        <dl>
+          <div><dt>Contrat</dt><dd>Contrat d'apprentissage de 12 à 24 mois</dd></div>
+          <div><dt>Métiers</dt><dd>Data Analyst, BI, Data Engineer, Data &amp; IA</dd></div>
+          <div><dt>Disponibilité</dt><dd>Immédiate</dd></div>
+          <div><dt>Lieu</dt><dd>Partout en France, en priorité Paris et Île-de-France</dd></div>
+        </dl>
+        <a class="btn" href="#contact" style="justify-self:start">Parlons-en</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 style="margin-top:10px">Un poste en alternance à me proposer ?</h2>
+        <p>Je réponds rapidement. Je serai heureux d'échanger sur votre équipe et sur la façon dont je peux y contribuer.</p>
+        <div class="cta"><a class="btn primary" href="assets/doc/CV_Rayan_NGUEBOU_TEMGOUA.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg>Télécharger mon CV</a></div>
+      </div>
+      <div class="channels">
+        <div class="channel"><div><small>E-mail</small><span class="val" id="mail">rayanrnguebou@gmail.com</span></div><button class="copy" type="button" data-copy="rayanrnguebou@gmail.com" id="copy-mail">Copier</button></div>
+        <div class="channel"><div><small>Téléphone</small><span class="val" id="tel">+33 7 53 60 19 60</span></div><button class="copy" type="button" data-copy="+33753601960" data-target="tel" id="copy-tel">Copier</button></div>
+        <div class="channel"><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/rayan-nguebou-temgoua-8467b8271" target="_blank" rel="noopener">rayan-nguebou-temgoua</a></div></div>
+        <div class="channel"><div><small>GitHub</small><a href="https://github.com/rayanrnguebou" target="_blank" rel="noopener">github.com/rayanrnguebou</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rayan Nguebou Temgoua</span>
+    <span>Pontoise, Île-de-France</span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image agrandie">
+  <button class="close" type="button" id="lb-close">Fermer ✕</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+</div>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'), menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+
+  // Section active dans le menu
+  var links=[].slice.call(menu.querySelectorAll('a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+    links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
+  }
+
+  // Visionneuse d'images
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lb-img'), lbCap=document.getElementById('lb-cap'), last=null;
+  function close(){lb.hidden=true;lbImg.src='';if(last)last.focus()}
+  document.querySelectorAll('[data-zoom]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var img=b.querySelector('img'), cap=b.parentNode.querySelector('figcaption');
+      last=b;lbImg.src=img.src;lbImg.alt=img.alt;lbCap.textContent=cap?cap.textContent:'';lb.hidden=false;document.getElementById('lb-close').focus();
+    });
+  });
+  document.getElementById('lb-close').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close()});
+
+  // Copier l'e-mail
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy');
+      function ok(){b.textContent='Copié';setTimeout(function(){b.textContent='Copier'},1800)}
+      function sel(){var el=document.getElementById(b.getAttribute('data-target')||'mail');var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Sélectionné'}
+      try{navigator.clipboard.writeText(t).then(ok,sel)}catch(err){sel()}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
